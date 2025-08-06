@@ -1,0 +1,75 @@
+Docker is an open-source platform that enables you to build, package, and run applications in isolated environments called containers.
+A container is a lightweight, portable, and self-sufficient unit that includes:
+Application code
+Runtime (e.g., Python, Node.js)
+Libraries and dependencies
+Configuration files
+
+Container holds bare minimumOS which serves the applications
+It bare minimum OS, application run time, dependencies and packagas,code
+
+
+image is file which old set of commands and storage
+image ----> container
+container is the running instance of image
+docker ps:
+---------
+checks the running containers
+docker images:
+-------------
+displays 
+
+The docker ps command is a Docker CLI command used to list running containers on a system. By default, it displays a table with details about each running container, including:
+CONTAINER ID: A unique identifier for the container.
+IMAGE: The Docker image used to create the container.
+COMMAND: The command executed when the container starts.
+CREATED: When the container was created.
+STATUS: The current status (e.g., "Up 2 hours" or "Exited").
+PORTS: Any ports exposed or mapped to the host.
+NAMES: The name assigned to the container.
+Syntax
+docker ps [OPTIONS]
+Common Options
+-a, --all: Show all containers (including stopped ones), not just running ones.
+-q, --quiet: Display only container IDs.
+--format: Customize output format using Go templates (e.g., docker ps --format "{{.ID}} {{.Names}}")
+-n <number>: Show the last n containers (e.g., docker ps -n 5).
+-l, --latest: Show the most recently created container.
+--no-trunc: Prevent truncation of output (e.g., full container IDs).
+Example Usage
+List running containers:
+docker ps
+Output might look like:
+CONTAINER ID   IMAGE         COMMAND                  CREATED        STATUS        PORTS                    NAMES
+ab1c2d3e4f5g   nginx:latest  "/docker-entrypoint.…"   10 minutes ago Up 10 minutes 0.0.0.0:80->80/tcp       my-nginx
+List all containers (running and stopped):
+docker ps -a
+List only container IDs:
+docker ps -q
+Output:
+ab1c2d3e4f5g
+Custom output format:
+docker ps --format "Container: {{.Names}}, Image: {{.Image}}"
+Output:
+Container: my-nginx, Image: nginx:latest
+Notes
+docker ps only shows containers on the current Docker host.
+If no containers are running, the command returns an empty table (or nothing with -q).
+Use docker ps to quickly check the status of containers or troubleshoot issues like port conflicts.
+For more details, run:
+docker ps --help
+docker ps: checks the running containers
+--------
+docker images: displays the images available in server
+-------------
+docker pull: it pulls the image from docker repositiry which is called docker hub
+-----------
+docker create: it will create container from image
+-------------
+docker start: docker start conatinerID will start the container
+---------------
+docker run: it will pull,create and start the container from image
+-----------
+docker file: is used to buid custome images, we can make use of docker instructions to create a custome images
+-----------
+ 
