@@ -86,3 +86,6 @@ run         Create and run a new container from an image
   version     Show the Docker version information
   info        Display system-wide information
  
+ FROM: sets the base image for subsequent instructions, There is excepton ARG
+ -----
+ 
