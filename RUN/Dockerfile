@@ -1,2 +1,2 @@
 FROM almalinux:latest
-RUN apt install nginx -y
+RUN apt-egt install -y nginx
