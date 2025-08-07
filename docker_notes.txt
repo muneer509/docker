@@ -90,4 +90,5 @@ run         Create and run a new container from an image
  -----
  RUN: excutes a command in a new layer and commits the result: like installing packages, it runs at the time of image building
 -------
-
+CMD: is used in a dockerfile to specify the deafult command to run when a container is started from the image
+-----
