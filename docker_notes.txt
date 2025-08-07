@@ -92,3 +92,5 @@ run         Create and run a new container from an image
 -------
 CMD: is used in a dockerfile to specify the deafult command to run when a container is started from the image
 -----
+LABEL: is used to add metadata to a docker image, its key value pairs that describe the image(maintainer, info, version, description,excutes)
+------
