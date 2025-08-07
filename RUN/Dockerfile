@@ -1,2 +1,4 @@
 FROM almalinux:latest
-RUN apt-get install -y nginx 
+
+RUN dnf install -y nginx \
+    && dnf clean all
