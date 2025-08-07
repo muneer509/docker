@@ -88,4 +88,6 @@ run         Create and run a new container from an image
  
  FROM: sets the base image for subsequent instructions, There is excepton ARG
  -----
- 
+ RUN: excutes a command in a new layer and commits the result: like installing packages, it runs at the time of image building
+-------
+
