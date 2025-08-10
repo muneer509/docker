@@ -94,3 +94,5 @@ CMD: is used in a dockerfile to specify the deafult command to run when a contai
 -----
 LABEL: is used to add metadata to a docker image, its key value pairs that describe the image(maintainer, info, version, description,excutes)
 ------
+EXPOSE: It will not effect any functionality, it willgives only the information what ports this container is going to use
+-------
