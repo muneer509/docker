@@ -96,3 +96,5 @@ LABEL: is used to add metadata to a docker image, its key value pairs that descr
 ------
 EXPOSE: It will not effect any functionality, it willgives only the information what ports this container is going to use
 -------
+COPY: used to copy files from local to image
+-----
