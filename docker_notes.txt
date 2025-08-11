@@ -104,5 +104,10 @@ ENTRYPOINT: CMD can overriden, but not entrypoint. we can use cmd to pass arugum
 ------------
 USER: Used to specify which userthe contianer should run as for subsequent onstructions in the build process and when the container is excuted.
 -----
-WORKDIR:
+WORKDIR: Used to set the current working directory for all subsequent RUN,CMD,ENTRYPOINT, COPY and ADD instructions
 --------
+Syntax: WORKDIR /path/to/directory
+ARG:It used to define build time variables in a dockerfile. This variables exist only during the image build time and are not available at container runtime(unless explicitly passed into ENV).
+-----
+ 
+
