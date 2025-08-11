@@ -102,3 +102,4 @@ ADD: It will copy local files to image, and also copy files from remote and extr
 -----
 ENTRYPOINT: CMD can overriden, but not entrypoint. we can use cmd to pass aruguments to entrypoint
 ------------
+USER: 
