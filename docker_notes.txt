@@ -99,3 +99,6 @@ EXPOSE: It will not effect any functionality, it willgives only the information 
 COPY: used to copy files from local to image
 -----
 ADD: It will copy local files to image, and also copy files from remote and extract it
+-----
+ENTRYPOINT:
+------------
