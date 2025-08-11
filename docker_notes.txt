@@ -100,5 +100,5 @@ COPY: used to copy files from local to image
 -----
 ADD: It will copy local files to image, and also copy files from remote and extract it
 -----
-ENTRYPOINT:
+ENTRYPOINT: CMD can overriden, but not entrypoint. we can use cmd to pass aruguments to entrypoint
 ------------
