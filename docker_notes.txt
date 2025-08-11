@@ -102,4 +102,7 @@ ADD: It will copy local files to image, and also copy files from remote and extr
 -----
 ENTRYPOINT: CMD can overriden, but not entrypoint. we can use cmd to pass aruguments to entrypoint
 ------------
-USER: 
+USER: Used to specify which userthe contianer should run as for subsequent onstructions in the build process and when the container is excuted.
+-----
+WORKDIR:
+--------
