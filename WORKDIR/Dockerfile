@@ -1,4 +1,4 @@
-FROM alamalinux:9
+FROM almalinux:9
 RUN mkdir /tmp/docker \
     cd /tmp/docker \
     pwd \
