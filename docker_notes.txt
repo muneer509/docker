@@ -109,5 +109,10 @@ WORKDIR: Used to set the current working directory for all subsequent RUN,CMD,EN
 Syntax: WORKDIR /path/to/directory
 ARG:It used to define build time variables in a dockerfile. This variables exist only during the image build time and are not available at container runtime(unless explicitly passed into ENV).
 -----
+ONBUILD:Used in a parent/base image to define build steps that shuld happen when another image is buit from it.
+--------
+* when building the base image the ONBUILD command is nit excuted.
+* when building a child image that ises FROM the ONBUILD commands are triggered automatically
+
  
 
