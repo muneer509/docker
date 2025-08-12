@@ -10,5 +10,5 @@ ARG Instruction="ARG"
 ARG course="Docker"
 ARG duration="1hr"
 ENV duration=$duration
-RUN echp "Course: $course, Duration: $duration, version: $version"
+RUN echo "Course: $course, Duration: $duration, version: $version"
 CMD [ "sleep", "1000" ]
