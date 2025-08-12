@@ -5,7 +5,7 @@
 # CMD [ "sleep", "1000"]
 
 ARG version
-FROM almalinux:{version:-9}
+FROM almalinux:${version:-9}
 ARG Instruction="ARG"
 ARG course="Docker"
 ARG duration="1hr"
