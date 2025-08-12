@@ -7,8 +7,8 @@
 ARG version
 FROM almalinux:{version:-9}
 ARG Instruction="ARG"
-    course="Docker"
-    duration="1hr"
+ARG course="Docker"
+ARG duration="1hr"
 ENV duration=$duration
 RUN echp "Course: $course, Duration: $duration, version: $version"
 CMD [ "sleep", "1000" ]
