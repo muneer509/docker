@@ -113,6 +113,24 @@ ONBUILD:Used in a parent/base image to define build steps that shuld happen when
 --------
 * when building the base image the ONBUILD command is nit excuted.
 * when building a child image that ises FROM the ONBUILD commands are triggered automatically
+Docker networks:
+-------------------
+2 types of networks available in docker
+1. hots 2. bridge
 
+Docker containes cant be communicate internally, for communication you should shoud create a network to exstablish connections between containers
+docker network syntax:
+----------------------
+docker network create networkname(expense)
+Manage networks
+
+Commands:
+  connect     Connect a container to a network
+  create      Create a network
+  disconnect  Disconnect a container from a network
+  inspect     Display detailed information on one or more networks
+  ls          List networks
+  prune       Remove all unused networks
+  rm          Remove one or more networks
  
 

@@ -1,0 +1,27 @@
+version: "3"
+networks:
+ expense:
+valumes:
+  mysql: #docker valume craete mysql
+services:
+  mysql:
+    image: joindevops/mysql:v1
+    container_name: mysql # --name mysql
+    valumes: 
+    - mysql: /var/lib/mysql # mysql:/var/lib/mysql
+  backend:
+    image: joindevops/backend:v1
+    conatiner_name: backend
+    dependes on:
+    -mysql
+  frontend:
+    image: joindevops/frontend:v1
+    container_name: frontend
+    ports:
+      - 80:80
+    depends on:
+    - backend
+    
+
+
+
