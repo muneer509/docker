@@ -7,7 +7,7 @@ services:
   mysql:
     image: joindevops/mysql:v1
     container_name: mysql # --name mysql
-    valumes: 
+    volumes: 
     - mysql: /var/lib/mysql # mysql:/var/lib/mysql
   backend:
     image: joindevops/backend:v1
