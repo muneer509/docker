@@ -1,27 +1,50 @@
+# version: "3"
+# networks:
+#  expense:
+# valumes:
+#   mysql: #docker valume craete mysql
+# services:
+#   mysql:
+#     image: joindevops/mysql:v1
+#     container_name: mysql # --name mysql
+#     volumes: 
+#     - mysql: /var/lib/mysql # mysql:/var/lib/mysql
+#   backend:
+#     image: joindevops/backend:v1
+#     conatiner_name: backend
+#     dependes on:
+#     - mysql
+#   frontend:
+#     image: joindevops/frontend:v1
+#     container_name: frontend
+#     ports:
+#       - 80:80
+#     depends on:
+#     - backend
+
+
 version: "3"
 networks:
- expense:
-valumes:
-  mysql: #docker valume craete mysql
+  expense:
+volumes:
+  mysql:  # docker volume create mysql
 services:
   mysql:
     image: joindevops/mysql:v1
     container_name: mysql # --name mysql
-    volumes: 
-    - mysql: /var/lib/mysql # mysql:/var/lib/mysql
+    volumes:
+    - mysql:/var/lib/mysql # -v mysql:/var/lib/mysql
   backend:
     image: joindevops/backend:v1
-    conatiner_name: backend
-    dependes on:
+    container_name: backend
+    command: sh -c "sleep 5 && node /opt/server/index.js"
+    depends_on:
     - mysql
   frontend:
     image: joindevops/frontend:v1
     container_name: frontend
     ports:
-      - 80:80
-    depends on:
+    - 80:80
+    depends_on:
     - backend
-
-
-
 
