@@ -13,7 +13,7 @@ services:
     image: joindevops/backend:v1
     conatiner_name: backend
     dependes on:
-    -mysql
+    - mysql
   frontend:
     image: joindevops/frontend:v1
     container_name: frontend
@@ -21,7 +21,7 @@ services:
       - 80:80
     depends on:
     - backend
-    
+
 
 
 
